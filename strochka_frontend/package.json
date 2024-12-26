@@ -1,5 +1,5 @@
 {
-  "name": "strochka_frontend",
+  "name": "@strochka/strochka_frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,10 @@
     "format": "prettier --log-level warn --cache --write \"{src/**/*,*}.{ts,tsx, json, yml, scss}\""
   },
   "dependencies": {
+    "@strochka/strochka_backend": "workspace:*",
+    "@tanstack/react-query": "^5.62.10",
+    "@trpc/client": "^10.45.2",
+    "@trpc/react-query": "^10.45.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
