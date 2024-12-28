@@ -1,0 +1,4 @@
+'*.{ts,js}':
+  - 'lint --fix'
+  - 'pnpm format'
+'*.{json,yml}': 'pnpm format'

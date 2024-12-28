@@ -7,9 +7,12 @@
     "frontend": "pnpm --filter @strochka/strochka_frontend",
     "dev": "pnpm -r --parallel dev",
     "check-types": "pnpm -r --parallel check-types",
-    "format": "pnpm -r --parallel format"
+    "format": "pnpm -r --parallel format",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
