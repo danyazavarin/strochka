@@ -1,5 +1,19 @@
 {
   "name": "strochka",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "scripts": {
+    "backend": "pnpm --filter @strochka/strochka_backend",
+    "frontend": "pnpm --filter @strochka/strochka_frontend",
+    "dev": "pnpm -r --parallel dev",
+    "check-types": "pnpm -r --parallel check-types",
+    "format": "pnpm -r --parallel format"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  }
 }
