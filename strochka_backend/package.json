@@ -7,7 +7,7 @@
     "build": "rimraf ./dist && tsc --build ./tsconfig.json",
     "start": "node ./dist/index.js",
     "check-types": "tsc --noEmit --project ./tsconfig.json",
-    "format": "prettier --log-level warn --cache --write \"{src/**/*,*}.{ts,tsx, json, yml, scss}\""
+    "format": "prettier --log-level warn --cache --write \"{src/**/*,*}.{ts, json, yml}\""
   },
   "dependencies": {
     "@trpc/server": "^10.45.2",
