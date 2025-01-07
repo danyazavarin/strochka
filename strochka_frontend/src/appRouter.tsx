@@ -1,6 +1,7 @@
 import { lazy } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { routerConfig } from './lib/routerConfig';
+import { Layout } from './pages/layout';
 
 const AllIdeasPage = lazy(() => import('./pages/allIdeasPage'));
 const ViewIdeaPage = lazy(() => import('./pages/viewIdeaPage'));
@@ -12,15 +13,21 @@ const {
 export const appRouter = createBrowserRouter([
   {
     path: baseUrl(),
-    element: <div>Home</div>,
+    element: <Layout />,
     errorElement: <div>Error</div>,
-  },
-  {
-    path: allIdeas(),
-    element: <AllIdeasPage />,
-  },
-  {
-    path: viewIdea({ ideaNick: ':ideaNick' }),
-    element: <ViewIdeaPage />,
+    children: [
+      {
+        index: true,
+        element: <Navigate to={allIdeas()} replace />,
+      },
+      {
+        path: allIdeas(),
+        element: <AllIdeasPage />,
+      },
+      {
+        path: viewIdea({ ideaNick: ':ideaNick' }),
+        element: <ViewIdeaPage />,
+      },
+    ],
   },
 ]);
