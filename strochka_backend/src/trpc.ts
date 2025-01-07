@@ -1,4 +1,5 @@
 import { initTRPC } from '@trpc/server';
+import { z } from 'zod';
 
 const ideas = [
   {
@@ -43,6 +44,16 @@ export const trpcRouter = trpc.router({
       }),
     };
   }),
+  getIdea: trpc.procedure
+    .input(
+      z.object({
+        ideaNick: z.string(),
+      }),
+    )
+    .query(({ input }) => {
+      const idea = ideas.find((idea) => idea.nick === input.ideaNick);
+      return { idea: idea || null };
+    }),
 });
 
 export type TrpcRouter = typeof trpcRouter;
