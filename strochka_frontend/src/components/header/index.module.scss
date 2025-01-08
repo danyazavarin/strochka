@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+  position: sticky;
+  backdrop-filter: blur(2px);
+
+  &__content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+    text-decoration: none;
+    color: black;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__list {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+  }
+
+  &__link {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: bisque;
+    }
+
+    &_active {
+      color: slategrey;
+
+      &:hover {
+        color: slategrey;
+      }
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+  }
+}
