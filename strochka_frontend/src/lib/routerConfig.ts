@@ -2,10 +2,13 @@ class Config {
   private readonly baseBackendRouteUrl: URL;
 
   public readonly appRoutes = {
-    baseUrl: () => inferLiteralFromString('/'),
-    allIdeas: () => inferLiteralFromString('/allIdeas'),
-    viewIdea: ({ ideaNick }: { ideaNick: string }) =>
-      inferLiteralFromString(`/allIdeas/${ideaNick}`),
+    getBaseUrl: () => inferLiteralFromString('/'),
+    getThreadsUrl: () => inferLiteralFromString('/threads'),
+    getOneThreadUrl: ({ ideaNick }: { ideaNick: string }) =>
+      inferLiteralFromString(`/threads/${ideaNick}`),
+    getRecommendsUrl: () => inferLiteralFromString('/recommends'),
+    getMostPopularUrl: () => inferLiteralFromString('/most-popular'),
+    getAboutUrl: () => inferLiteralFromString('/about'),
   };
 
   constructor(baseBackendRouteUrl = 'http://localhost:3000/') {

@@ -1,32 +1,28 @@
 import { lazy } from 'react';
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import { routerConfig } from './lib/routerConfig';
 import { Layout } from './pages/layout';
 
-const AllIdeasPage = lazy(() => import('./pages/allIdeasPage'));
-const ViewIdeaPage = lazy(() => import('./pages/viewIdeaPage'));
+const ThreadsPage = lazy(() => import('./pages/threadsPage'));
+const OneThreadPage = lazy(() => import('./pages/oneThreadPage'));
 
 const {
-  appRoutes: { baseUrl, allIdeas, viewIdea },
+  appRoutes: { getBaseUrl, getThreadsUrl, getOneThreadUrl },
 } = routerConfig;
 
 export const appRouter = createBrowserRouter([
   {
-    path: baseUrl(),
+    path: getBaseUrl(),
     element: <Layout />,
     errorElement: <div>Error</div>,
     children: [
       {
-        index: true,
-        element: <Navigate to={allIdeas()} replace />,
+        path: getThreadsUrl(),
+        element: <ThreadsPage />,
       },
       {
-        path: allIdeas(),
-        element: <AllIdeasPage />,
-      },
-      {
-        path: viewIdea({ ideaNick: ':ideaNick' }),
-        element: <ViewIdeaPage />,
+        path: getOneThreadUrl({ ideaNick: ':ideaNick' }),
+        element: <OneThreadPage />,
       },
     ],
   },

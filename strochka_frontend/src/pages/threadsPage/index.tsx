@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { trpc } from '../../lib/trpcConfig';
 import { routerConfig } from '../../lib/routerConfig';
 
-const AllIdeasPage = () => {
+const ThreadsPage = () => {
   const { data, error, isLoading, isFetching, isError } = trpc.getIdeas.useQuery();
 
   if (isLoading || isFetching) {
@@ -19,7 +19,9 @@ const AllIdeasPage = () => {
       {data?.ideas.map((idea) => (
         <div key={idea.nick}>
           <h2>
-            <Link to={routerConfig.appRoutes.viewIdea({ ideaNick: idea.nick })}>{idea.name}</Link>
+            <Link to={routerConfig.appRoutes.getOneThreadUrl({ ideaNick: idea.nick })}>
+              {idea.name}
+            </Link>
           </h2>
           <p>{idea.description}</p>
         </div>
@@ -28,4 +30,4 @@ const AllIdeasPage = () => {
   );
 };
 
-export default AllIdeasPage;
+export default ThreadsPage;

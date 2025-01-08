@@ -2,8 +2,8 @@ import { useParams } from 'react-router-dom';
 import { TAppRoutesParams } from '../../lib/routerConfig';
 import { trpc } from '../../lib/trpcConfig';
 
-const ViewIdeaPage = () => {
-  const { ideaNick } = useParams<TAppRoutesParams['viewIdea']>();
+const OneThreadPage = () => {
+  const { ideaNick } = useParams<TAppRoutesParams['getOneThreadUrl']>();
 
   if (!ideaNick) {
     return <span>Invalid idea nick</span>;
@@ -34,4 +34,4 @@ const ViewIdeaPage = () => {
   );
 };
 
-export default ViewIdeaPage;
+export default OneThreadPage;
