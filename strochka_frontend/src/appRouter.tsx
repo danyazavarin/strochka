@@ -5,6 +5,7 @@ import { Layout } from './pages/layout';
 
 const ThreadsPage = lazy(() => import('./pages/threadsPage'));
 const OneThreadPage = lazy(() => import('./pages/oneThreadPage'));
+const PreviewPage = lazy(() => import('./pages/previewPage'));
 
 const {
   appRoutes: { getBaseUrl, getThreadsUrl, getOneThreadUrl },
@@ -16,6 +17,10 @@ export const appRouter = createBrowserRouter([
     element: <Layout />,
     errorElement: <div>Error</div>,
     children: [
+      {
+        index: true,
+        element: <PreviewPage />,
+      },
       {
         path: getThreadsUrl(),
         element: <ThreadsPage />,

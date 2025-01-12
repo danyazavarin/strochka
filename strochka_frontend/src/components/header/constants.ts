@@ -8,16 +8,16 @@ export const logoLink = getBaseUrl();
 
 export const headerLinks: Record<'name' | 'link', string>[] = [
   {
+    name: 'Threads',
+    link: getThreadsUrl(),
+  },
+  {
     name: 'Recommends',
     link: getRecommendsUrl(),
   },
   {
     name: 'Most popular',
     link: getMostPopularUrl(),
-  },
-  {
-    name: 'Threads',
-    link: getThreadsUrl(),
   },
   {
     name: 'About',
