@@ -2,14 +2,14 @@ import { Link, NavLink } from 'react-router-dom';
 import styles from './index.module.scss';
 import { headerLinks, logoLink } from './constants';
 import classnames from 'classnames';
-import search from '../../assets/search.svg';
+import { SearchElement } from '../../assets/searchElement';
 
 export const Header = () => {
   return (
     <header className={styles.header}>
       <main className={styles.header__content}>
         <Link className={styles.header__logo} to={logoLink}>
-          Stroka
+          Strochka
         </Link>
         <nav className={styles.header__nav}>
           <ul className={styles.header__list}>
@@ -24,8 +24,8 @@ export const Header = () => {
               </NavLink>
             ))}
           </ul>
-          <div className={styles.header__image}>
-            <img src={search} alt='search' />
+          <div className={styles.header__image} tabIndex={0}>
+            <SearchElement />
           </div>
         </nav>
       </main>
