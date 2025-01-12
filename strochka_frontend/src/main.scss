@@ -1,9 +1,22 @@
-::-webkit-scrollbar {
-  width: 0;
-}
-
 body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scrollbar-width: 10px;
+  scrollbar-color: #313942;
+  background-color: #edece9;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #313942;
+  border-radius: 20px;
 }

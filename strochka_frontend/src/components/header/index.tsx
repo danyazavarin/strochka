@@ -27,6 +27,7 @@ export const Header = () => {
           <div className={styles.header__image} tabIndex={0}>
             <SearchElement />
           </div>
+          <button className={styles.header__button}>Login</button>
         </nav>
       </main>
     </header>
