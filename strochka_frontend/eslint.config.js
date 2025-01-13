@@ -54,16 +54,6 @@ export default tseslint.config(
       'arrow-parens': ['error', 'always'],
       camelcase: ['error', { allow: ['^UNSAFE_', '^_paq'] }],
       'brace-style': 'off',
-      'comma-dangle': [
-        'error',
-        {
-          arrays: 'always-multiline',
-          objects: 'always-multiline',
-          imports: 'always-multiline',
-          exports: 'always-multiline',
-          functions: 'never',
-        },
-      ],
       complexity: ['error', { max: 25 }],
       curly: ['error', 'multi-line'],
       eqeqeq: ['error', 'always'],

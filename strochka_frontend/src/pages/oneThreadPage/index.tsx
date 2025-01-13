@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import type { TAppRoutesParams } from '../../lib/routerConfig';
-import { trpc } from '../../lib/trpcConfig';
+import type { TAppRoutesParams } from '@/lib/routerConfig';
+import { trpc } from '@/lib/trpcConfig';
 
 const OneThreadPage = () => {
   const { ideaNick } = useParams<TAppRoutesParams['getOneThreadUrl']>();

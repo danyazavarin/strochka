@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { trpc } from '../../lib/trpcConfig';
-import { routerConfig } from '../../lib/routerConfig';
+import { trpc } from '@/lib/trpcConfig';
+import { routerConfig } from '@/lib/routerConfig';
 
 const ThreadsPage = () => {
   const { data, error, isLoading, isFetching, isError } = trpc.getIdeas.useQuery();

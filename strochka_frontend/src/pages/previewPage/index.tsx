@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { SearchElement } from '../../assets/searchElement';
+import { SearchElement } from '@/assets/searchElement';
 import styles from './index.module.scss';
-import { routerConfig } from '../../lib/routerConfig';
+import { routerConfig } from '@/lib/routerConfig';
 
 const {
   appRoutes: { getThreadsUrl, getAboutUrl },

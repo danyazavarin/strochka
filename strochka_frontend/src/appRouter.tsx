@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { routerConfig } from './lib/routerConfig';
-import { Layout } from './pages/layout';
+import { routerConfig } from '@/lib/routerConfig';
+import { Layout } from '@/pages/layout';
 
 const ThreadsPage = lazy(() => import('./pages/threadsPage'));
 const OneThreadPage = lazy(() => import('./pages/oneThreadPage'));

@@ -26,7 +26,12 @@
     "noUncheckedIndexedAccess": true,
     "allowUnreachableCode": false,
     "downlevelIteration": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src", "@types"]
 }

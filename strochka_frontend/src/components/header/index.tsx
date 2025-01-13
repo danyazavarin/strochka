@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import styles from './index.module.scss';
 import { headerLinks, logoLink } from './constants';
 import classnames from 'classnames';
-import { SearchElement } from '../../assets/searchElement';
+import { SearchElement } from '@/assets/searchElement';
 
 export const Header = () => (
   <header className={styles.header}>
