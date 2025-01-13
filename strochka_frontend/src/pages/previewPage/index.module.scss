@@ -25,7 +25,7 @@
       font-size: 20px;
       font-weight: 600;
       letter-spacing: 1px;
-      color: #566962;
+      color: $hover-text-color;
     }
   }
 
@@ -44,7 +44,7 @@
       font-size: 16px;
       letter-spacing: 0.5px;
       text-decoration: none;
-      color: #313942;
+      color: $primary-text-color;
       padding: 5px 10px;
       border: none;
       border-radius: 8px;
@@ -54,14 +54,14 @@
 
       &:hover,
       &:focus {
-        color: #566962;
+        color: $hover-text-color;
       }
     }
   }
 
   &__link {
-    background-color: #566962 !important;
-    color: #eae8e3 !important;
+    background-color: $secondary-background-color !important;
+    color: $secondary-text-color !important;
     transition: opacity 0.2s ease-in-out !important;
 
     &:hover,
@@ -72,13 +72,13 @@
 
   // TODO: make it mixin
   &__image {
-    fill: #313942;
+    fill: $primary-text-color;
     cursor: pointer;
     transition: fill 0.2s ease-in-out;
 
     &:hover,
     &:focus {
-      fill: #566962;
+      fill: $hover-text-color;
     }
   }
 }

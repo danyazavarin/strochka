@@ -4,8 +4,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   scrollbar-width: 10px;
-  scrollbar-color: #313942;
-  background-color: #edece9;
+  scrollbar-color: $primary-text-color;
+  background-color: $primary-background-color;
 }
 
 *::-webkit-scrollbar {
@@ -17,6 +17,6 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #313942;
+  background-color: $primary-text-color;
   border-radius: 20px;
 }
