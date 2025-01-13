@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { TAppRoutesParams } from '../../lib/routerConfig';
+import type { TAppRoutesParams } from '../../lib/routerConfig';
 import { trpc } from '../../lib/trpcConfig';
 
 const OneThreadPage = () => {

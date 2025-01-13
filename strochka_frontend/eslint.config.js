@@ -1,8 +1,8 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -18,11 +18,105 @@ export default tseslint.config(
       'react-refresh': reactRefresh,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
+      'no-undef': 'off',
+      '@typescript-eslint/array-type': ['error', { default: 'array', readonly: 'generic' }],
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: ['class', 'interface', 'enum'],
+          format: ['PascalCase'],
+        },
       ],
+      '@typescript-eslint/indent': 'off',
+      '@typescript-eslint/no-empty-interface': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-misused-new': 'error',
+      '@typescript-eslint/no-namespace': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          args: 'after-used',
+          caughtErrors: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^ignore',
+        },
+      ],
+      '@typescript-eslint/no-use-before-define': 'off',
+      '@typescript-eslint/no-var-requires': 'off',
+      '@typescript-eslint/prefer-function-type': 'error',
+      '@typescript-eslint/unified-signatures': 'error',
+      '@typescript-eslint/explicit-member-accessibility': ['warn'],
+      'react/jsx-no-target-blank': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'arrow-body-style': ['error', 'as-needed'],
+      'array-bracket-spacing': ['error', 'never'],
+      'arrow-parens': ['error', 'always'],
+      camelcase: ['error', { allow: ['^UNSAFE_', '^_paq'] }],
+      'brace-style': 'off',
+      'comma-dangle': [
+        'error',
+        {
+          arrays: 'always-multiline',
+          objects: 'always-multiline',
+          imports: 'always-multiline',
+          exports: 'always-multiline',
+          functions: 'never',
+        },
+      ],
+      complexity: ['error', { max: 25 }],
+      curly: ['error', 'multi-line'],
+      eqeqeq: ['error', 'always'],
+      'guard-for-in': 'error',
+      'key-spacing': [
+        'error',
+        {
+          beforeColon: false,
+          afterColon: true,
+        },
+      ],
+      'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+      'max-classes-per-file': ['error', 8],
+      'max-len': [
+        'error',
+        {
+          code: 160,
+          tabWidth: 4,
+          ignoreUrls: true,
+          ignoreTemplateLiterals: true,
+          ignoreRegExpLiterals: true,
+        },
+      ],
+      'max-statements-per-line': ['error', { max: 1 }],
+      'no-caller': 'error',
+      'no-cond-assign': 'error',
+      'no-empty': ['error', { allowEmptyCatch: true }],
+      'no-multiple-empty-lines': ['error', { max: 1 }],
+      'no-eval': 'error',
+      'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      'no-new-wrappers': 'error',
+      'no-redeclare': 'error',
+      'no-throw-literal': 'error',
+      'no-trailing-spaces': 'error',
+      'no-undef-init': 'error',
+      'no-unsafe-finally': 'error',
+      'no-unused-vars': 'off',
+      'no-var': 'error',
+      'no-shadow': 'off',
+      'one-var': ['error', 'never'],
+      'prefer-const': 'error',
+      quotes: 'off',
+      semi: ['error', 'always'],
+      'spaced-comment': ['error', 'always'],
+      'space-before-function-paren': 'off',
+      'space-in-parens': ['error', 'never'],
+      'use-isnan': 'error',
+      'valid-jsdoc': 'off',
+      'valid-typeof': 'error',
+      'no-case-declarations': 'off',
+      'react/prop-types': 'off',
+      'react/no-string-refs': 'off',
+      'react-hooks/rules-of-hooks': 'error',
     },
   },
-)
+);

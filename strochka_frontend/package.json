@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --open",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "check-types": "tsc --noEmit --project ./tsconfig.app.json && tsc --noEmit --project ./tsconfig.node.json",
     "format": "prettier --log-level warn --cache --write \"{src/**/*,*}.{ts,tsx, json, yml, scss}\""

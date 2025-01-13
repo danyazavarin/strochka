@@ -11,7 +11,7 @@ class Config {
     getAboutUrl: () => inferLiteralFromString('/about'),
   };
 
-  constructor(baseBackendRouteUrl = 'http://localhost:3000/') {
+  public constructor(baseBackendRouteUrl = 'http://localhost:3000/') {
     this.baseBackendRouteUrl = new URL(baseBackendRouteUrl);
   }
 
