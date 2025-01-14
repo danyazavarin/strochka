@@ -1,4 +1,7 @@
 '*.{ts,tsx,js}':
   - 'pnpm lint --fix'
   - 'pnpm format'
-'*.{json,yml,scss}': 'pnpm format'
+'*.scss':
+  - 'pnpm stylelint --fix'
+  - 'pnpm format'
+'*.{json,yml}': 'pnpm format'
