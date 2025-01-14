@@ -5,5 +5,11 @@
   "printWidth": 100,
   "tabWidth": 2,
   "quoteProps": "preserve",
-  "useTabs": false
+  "useTabs": false,
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^@/(.*)$", "^[./]"],
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "importOrderParserPlugins": ["classProperties", "typescript", "jsx"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
 }

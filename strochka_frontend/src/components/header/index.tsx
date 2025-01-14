@@ -1,8 +1,8 @@
-import { Link, NavLink } from 'react-router-dom';
-import styles from './index.module.scss';
-import { headerLinks, logoLink } from './constants';
 import classnames from 'classnames';
+import { Link, NavLink } from 'react-router-dom';
 import { SearchElement } from '@/assets/searchElement';
+import { headerLinks, logoLink } from './constants';
+import styles from './index.module.scss';
 
 export const Header = () => (
   <header className={styles.header}>
